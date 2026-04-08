@@ -1,0 +1,123 @@
+.transaction-history {
+  margin: 0 auto;
+  max-width: 980px;
+}
+
+.history-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.9rem;
+}
+
+.history-header-row h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.history-export-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+}
+
+.export-btn {
+  border: 1px solid rgba(13, 71, 161, 0.2);
+  background: #f5f9ff;
+  color: #154272;
+  border-radius: 10px;
+  padding: 0.4rem 0.65rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.export-icon {
+  border-radius: 6px;
+  padding: 0.15rem 0.32rem;
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+.export-btn.excel .export-icon {
+  background: #217346;
+}
+
+.export-btn.csv .export-icon {
+  background: #3d6b99;
+}
+
+.export-btn.pdf .export-icon {
+  background: #c53030;
+}
+
+.transaction-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 1px solid #d8e5f5;
+  table-layout: fixed;
+}
+
+.transaction-table th,
+.transaction-table td {
+  padding: 0.85rem 0.8rem;
+  text-align: left;
+  font-size: 0.96rem;
+  vertical-align: middle;
+  word-break: break-word;
+}
+
+.transaction-table th {
+  background: #0f3b73;
+  color: #f6faff;
+  font-weight: 700;
+  border-right: 1px solid #c5d5e8;
+}
+
+.transaction-table th:last-child {
+  border-right: none;
+}
+
+.transaction-table td {
+  border-right: 1px solid #d8e5f5;
+}
+
+.transaction-table td:last-child {
+  border-right: none;
+}
+
+.transaction-table tr:nth-child(even) {
+  background-color: #f5f8fd;
+}
+
+body.theme-dark .transaction-history {
+  color: #e8f0ff;
+}
+
+body.theme-dark .export-btn {
+  background: #203a5d;
+  color: #e8f0ff;
+  border-color: rgba(232, 240, 255, 0.24);
+}
+
+body.theme-dark .transaction-table {
+  border-color: rgba(232, 240, 255, 0.22);
+}
+
+body.theme-dark .transaction-table tr:nth-child(even) {
+  background-color: #213754;
+}
+
+body.theme-dark .transaction-table tr:nth-child(odd) {
+  background-color: #1b2f4b;
+}
+  

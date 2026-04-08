@@ -1,0 +1,445 @@
+/* Admin Dashboard Styling */
+
+.admin-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+.dashboard-container {
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Greeting Row */
+.dashboard-greeting-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 2rem 0 2rem;
+  gap: 1rem;
+}
+
+.dashboard-greeting-row h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  flex: 1;
+}
+
+.customer-logout-btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+.customer-logout-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+.customer-logout-btn:active {
+  transform: translateY(0);
+}
+
+/* Header Box with Balance and Currency */
+.dashboard-header {
+  padding: 1.5rem 2rem;
+  background: var(--bg-primary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.dashboard-balance-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.dashboard-balance-row p {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.dashboard-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.dashboard-header-actions label {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.dashboard-header-actions select {
+  padding: 0.65rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background-color: var(--input-bg);
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dashboard-header-actions select:hover {
+  border-color: #667eea;
+}
+
+.dashboard-header-actions select:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+/* Admin Section (Branch Info, Transactions) */
+.admin-section {
+  padding: 2rem;
+  margin-top: 1.5rem;
+}
+
+.admin-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.admin-section-header h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+/* Table Styling */
+.admin-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+  table-layout: fixed;
+}
+
+.admin-table thead {
+  background-color: var(--header-bg);
+  border-bottom: 2px solid var(--border-color);
+}
+
+.admin-table thead tr {
+  display: table-row;
+  width: 100%;
+}
+
+.admin-table thead th {
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-transform: capitalize;
+  border-right: 1px solid var(--border-color);
+  vertical-align: middle;
+}
+
+.admin-table thead th:last-child {
+  border-right: none;
+}
+
+.admin-table tbody tr {
+  border-bottom: 1px solid var(--border-color);
+  transition: background-color 0.2s ease;
+  display: table-row;
+  width: 100%;
+}
+
+.admin-table tbody tr:nth-child(odd) {
+  background-color: var(--row-bg-alt);
+}
+
+.admin-table tbody tr:hover {
+  background-color: var(--row-hover-bg);
+}
+
+.admin-table tbody td {
+  padding: 1rem;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  border-right: 1px solid var(--border-color);
+  vertical-align: middle;
+  word-break: break-word;
+}
+
+.admin-table tbody td:last-child {
+  border-right: none;
+}
+
+.admin-alert {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 1rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+  border-radius: 12px;
+  padding: 0.8rem 0.95rem;
+  border: 1px solid transparent;
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.admin-alert-icon {
+  font-size: 1.05rem;
+  line-height: 1.2;
+  flex-shrink: 0;
+}
+
+.admin-alert-text {
+  display: inline-block;
+  word-break: break-word;
+}
+
+.admin-alert-success {
+  border-color: #16a34a;
+  background: #ffffff;
+  color: #166534;
+}
+
+.admin-alert-error {
+  border-color: #dc2626;
+  background: #ffffff;
+  color: #991b1b;
+}
+
+.admin-alert-warning {
+  border-color: #f59e0b;
+  background: #ffffff;
+  color: #92400e;
+}
+
+/* Export Buttons */
+.history-export-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.export-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: white;
+  text-decoration: none;
+}
+
+.export-btn.excel {
+  background-color: #10b981;
+  box-shadow: 0 2px 4px rgba(16, 185, 129, 0.25);
+}
+
+.export-btn.excel:hover {
+  background-color: #059669;
+  box-shadow: 0 4px 8px rgba(16, 185, 129, 0.35);
+  transform: translateY(-1px);
+}
+
+.export-btn.csv {
+  background-color: #3b82f6;
+  box-shadow: 0 2px 4px rgba(59, 130, 246, 0.25);
+}
+
+.export-btn.csv:hover {
+  background-color: #2563eb;
+  box-shadow: 0 4px 8px rgba(59, 130, 246, 0.35);
+  transform: translateY(-1px);
+}
+
+.export-btn.pdf {
+  background-color: #ef4444;
+  box-shadow: 0 2px 4px rgba(239, 68, 68, 0.25);
+}
+
+.export-btn.pdf:hover {
+  background-color: #dc2626;
+  box-shadow: 0 4px 8px rgba(239, 68, 68, 0.35);
+  transform: translateY(-1px);
+}
+
+.export-icon {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+/* Dark Mode Support */
+.theme-dark {
+  --bg-primary: #1a1a2e;
+  --bg-secondary: #16213e;
+  --text-primary: #f5f5f5;
+  --text-secondary: #a0a0a0;
+  --border-color: #2d3561;
+  --input-bg: #0f3460;
+  --header-bg: #0f3460;
+  --row-bg-alt: #161a3a;
+  --row-hover-bg: #1f2854;
+}
+
+body.theme-dark .admin-alert-success {
+  background: rgba(34, 197, 94, 0.14);
+  border-color: #22c55e;
+  color: #bbf7d0;
+}
+
+body.theme-dark .admin-alert-error {
+  background: rgba(239, 68, 68, 0.14);
+  border-color: #ef4444;
+  color: #fecaca;
+}
+
+body.theme-dark .admin-alert-warning {
+  background: rgba(245, 158, 11, 0.16);
+  border-color: #f59e0b;
+  color: #fde68a;
+}
+
+.theme-light {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --text-primary: #1f2937;
+  --text-secondary: #6b7280;
+  --border-color: #e5e7eb;
+  --input-bg: #f3f4f6;
+  --header-bg: #f0f1f3;
+  --row-bg-alt: #fafbfc;
+  --row-hover-bg: #f3f4f6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .admin-page {
+    padding: 1rem;
+  }
+
+  .dashboard-greeting-row {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.5rem 1.5rem 0 1.5rem;
+  }
+
+  .dashboard-greeting-row h2 {
+    font-size: 1.25rem;
+    width: 100%;
+  }
+
+  .customer-logout-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .dashboard-balance-row {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .dashboard-balance-row p {
+    width: 100%;
+  }
+
+  .dashboard-header-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .admin-section-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .history-export-wrap {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .admin-table {
+    font-size: 0.85rem;
+  }
+
+  .admin-table thead th,
+  .admin-table tbody td {
+    padding: 0.75rem 0.5rem;
+  }
+
+  .export-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-page {
+    padding: 0.5rem;
+  }
+
+  .dashboard-greeting-row h2 {
+    font-size: 1rem;
+  }
+
+  .dashboard-balance-row p {
+    font-size: 0.95rem;
+  }
+
+  .admin-section {
+    padding: 1rem;
+  }
+
+  .admin-table {
+    font-size: 0.8rem;
+  }
+
+  .admin-table thead th,
+  .admin-table tbody td {
+    padding: 0.5rem 0.25rem;
+  }
+
+  .history-export-wrap {
+    gap: 0.5rem;
+  }
+
+  .export-btn {
+    padding: 0.35rem 0.6rem;
+    font-size: 0.75rem;
+    gap: 0.25rem;
+  }
+}
